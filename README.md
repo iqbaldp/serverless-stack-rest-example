@@ -1,0 +1,1 @@
+# Serverless Stack (SST) Rest API Example
