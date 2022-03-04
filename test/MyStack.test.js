@@ -1,12 +1,12 @@
 import { Template } from "aws-cdk-lib/assertions";
 import * as sst from "@serverless-stack/resources";
-import MyStack from "../stacks/MyStack";
+import TodoStack from "../stacks/TodoStack";
 
-test("Test Stack", () => {
+test("ToDo Stack", () => {
   const app = new sst.App();
-  // WHEN
-  const stack = new MyStack(app, "test-stack");
-  // THEN
+  
+  const stack = new TodoStack(app, "todo-stack");
+  
   const template = Template.fromStack(stack);
   template.resourceCountIs("AWS::Lambda::Function", 1);
 });
